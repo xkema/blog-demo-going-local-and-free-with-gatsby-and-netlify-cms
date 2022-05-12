@@ -1,0 +1,9 @@
+# nodejs
+node_modules/
+
+# gatsby
+.cache/
+public
+
+# other
+.DS_Store
