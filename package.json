@@ -1,0 +1,29 @@
+{
+  "name": "blog-demo-going-local-and-free-with-gatsby-and-netlify-cms",
+  "version": "1.0.0",
+  "description": "blog-demo-going-local-and-free-with-gatsby-and-netlify-cms",
+  "main": "index.js",
+  "scripts": {
+    "start": "gatsby clean && gatsby develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xkema/blog-demo-going-local-and-free-with-gatsby-and-netlify-cms.git"
+  },
+  "keywords": [
+    "Netlify CMS",
+    "Gatsby",
+    "Jamstack"
+  ],
+  "author": "Kemal Yılmaz <xkema@tutanota.com> (https://xkema.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xkema/blog-demo-going-local-and-free-with-gatsby-and-netlify-cms/issues"
+  },
+  "homepage": "https://github.com/xkema/blog-demo-going-local-and-free-with-gatsby-and-netlify-cms#readme",
+  "dependencies": {
+    "gatsby": "^4.21.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
