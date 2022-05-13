@@ -1,0 +1,24 @@
+# static/admin/config.yml
+
+backend:
+  name: github
+  repo: xkema/blog-demo-going-local-and-free-with-gatsby-and-netlify-cms
+  branch: main
+
+local_backend: true
+
+media_folder: uploads
+public_folder: /uploads
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  - name: designs
+    label: Designs
+    folder: "src/content/designs"
+    create: true
+    fields:
+      - {label: "Content Key", name: "contentKey", widget: "hidden", default: "design", required: true}
+      - {label: "Title", name: "title", widget: "string"}

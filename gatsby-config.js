@@ -1,0 +1,7 @@
+// gatsby-config.js
+
+module.exports = {
+  plugins: [
+    `gatsby-plugin-netlify-cms`
+  ]
+}
