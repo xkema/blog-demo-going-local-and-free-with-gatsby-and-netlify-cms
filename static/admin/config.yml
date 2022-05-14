@@ -22,3 +22,4 @@ collections:
     fields:
       - {label: "Content Key", name: "contentKey", widget: "hidden", default: "design", required: true}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
