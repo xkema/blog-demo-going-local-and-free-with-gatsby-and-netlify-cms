@@ -15,6 +15,16 @@ slug:
   clean_accents: true
 
 collections:
+  - name: pages
+    label: Pages
+    folder: "src/pages"
+    create: true
+    fields:
+      - {label: "Content Key", name: "contentKey", widget: "hidden", default: "page", required: true}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Body", name: "body", widget: "markdown", required: false}
+
   - name: designs
     label: Designs
     folder: "src/content/designs"
