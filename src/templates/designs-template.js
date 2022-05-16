@@ -1,6 +1,6 @@
 // src/templates/designs-template.js
 
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import React from 'react'
 import Layout from '../components/Layout.js';
 
@@ -26,6 +26,7 @@ const DesignsTemplate = (props) => {
                 <li key={edge.node.id}>
                   <h1>{edge.node.frontmatter.title}</h1>
                   <p>{edge.node.frontmatter.description}</p>
+                  <Link to={edge.node.fields.slug}>{edge.node.fields.slug}</Link>
                 </li>
               );
             })
@@ -51,12 +52,15 @@ export const query = graphql`
       }
       html
     }
-     allMarkdownRemark(
-        filter: {frontmatter: {contentKey: {eq: "design"}}}
+    allMarkdownRemark(
+      filter: {frontmatter: {contentKey: {eq: "design"}}}
     ) {
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             description

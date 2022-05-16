@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       allMarkdownRemark(
         filter: {
           # Same filter duplicated here to demonstrate. One is adequate to filter the "pages" collection.
-          frontmatter: {contentKey: {eq: "page"}},
+          frontmatter: {contentKey: {in: ["page", "design"]}},
           fields: {slug: {ne: null}}
         }
       ) {
@@ -62,10 +62,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    // Create node filed "slug" for only "page" content.
+    // Create node filed "slug" for only "page" and "design" content types.
     // At least a single page with a "contentKey" has to be exist! If not you should add manually to the markdown files!
-    if (node.frontmatter.contentKey === 'page') {
-      const slug = createFilePath({ node, getNode, basePath: `src/pages` });
+    if (['page', 'design'].includes(node.frontmatter.contentKey)) {
+      const slug = createFilePath({ node, getNode, basePath: `src` });
       createNodeField({
         node,
         name: `slug`,
