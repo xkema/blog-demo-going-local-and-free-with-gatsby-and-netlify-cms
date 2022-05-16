@@ -14,6 +14,10 @@ const DesignTemplate = (props) => {
         <h1>Design Content Template</h1>
         <div>{props.data.markdownRemark.frontmatter.title}</div>
         <div>{props.data.markdownRemark.frontmatter.description}</div>
+        <img
+          src={props.data.markdownRemark.frontmatter.image.publicURL}
+          alt={"Please always fill the alternative text attributes!"}
+        />
       </div>
     </Layout>
   )
@@ -28,6 +32,9 @@ export const query = graphql`
       frontmatter {
         title
         description
+        image {
+          publicURL
+        }
       }
     }
   }
