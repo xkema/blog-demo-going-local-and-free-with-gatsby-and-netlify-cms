@@ -17,6 +17,7 @@ collections:
   - name: pages
     label: Pages
     folder: "src/pages"
+    public_folder: ../../uploads
     create: true
     fields:
       - {label: "Content Key", name: "contentKey", widget: "hidden", default: "page", required: true}
