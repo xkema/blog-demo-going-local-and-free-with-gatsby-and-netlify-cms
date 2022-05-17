@@ -23,6 +23,9 @@ module.exports = {
         name: `content`,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-netlify-cms`
   ]
