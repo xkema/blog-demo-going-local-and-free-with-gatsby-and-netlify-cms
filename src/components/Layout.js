@@ -5,7 +5,7 @@ import Navigation from './Navigation.js'
 
 const Layout = (props) => {
   return (
-    <div className="Layout">
+    <div>
       <header>
         <Navigation />
       </header>

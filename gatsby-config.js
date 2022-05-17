@@ -40,6 +40,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-postcss`,
     `gatsby-plugin-netlify-cms`
   ]
 }
