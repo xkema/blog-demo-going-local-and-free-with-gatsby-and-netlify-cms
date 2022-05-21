@@ -24,7 +24,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown", required: false}
-
+      - {label: "Featured Image", name: "featuredImage", widget: "image", required: false, allow_multiple: false, choose_url: false}
+  
   - name: designs
     label: Designs
     folder: "src/content/designs"

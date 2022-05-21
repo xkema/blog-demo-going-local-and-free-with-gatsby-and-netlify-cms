@@ -34,6 +34,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach((edge) => {
     // Assumption 1: Every page has a template with its slug in "{{slug}}-template.js" format.
     let pageTemplatePath = path.resolve(`./src/templates/${edge.node.fields.slug.replaceAll('/', '')}-template.js`);
+    // Add a special case for the index layout (We need to match the slug "/" to "index-template.js" manually.)
+    if (edge.node.fields.slug === '/') {
+      pageTemplatePath = path.resolve(`./src/templates/index-template.js`);
+    }
     // Check if there is a template for the target page. If not fallback to the default template.
     // If any layout won't be used by any page, there will be a warning message in the Gatsby build logs like "The GraphQL query in the non-page component". That's OK!
     try {
