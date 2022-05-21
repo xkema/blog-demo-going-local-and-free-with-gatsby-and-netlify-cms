@@ -12,10 +12,18 @@ const PageTemplate = (props) => {
   return (
     <Layout>
       <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />
-      <div className='container py-4 px-4 md:px-0'
+      <div
         dangerouslySetInnerHTML={{
           __html: props.data.markdownRemark.html
-        }}>
+        }}
+        className='
+          container
+          py-4 px-4
+          md:px-0
+          prose
+          prose-p:text-stone-900
+          prose-img:rounded-lg
+      '>
       </div>
     </Layout>
   )

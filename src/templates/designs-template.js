@@ -18,7 +18,11 @@ const DesignsTemplate = (props) => {
         <div
           dangerouslySetInnerHTML={{
             __html: props.data.markdownRemark.html
-          }}>
+          }}
+          className='
+            prose
+            prose-p:text-stone-900
+        '>
         </div>
         <ul className='
           grid

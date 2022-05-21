@@ -24,6 +24,7 @@
   "homepage": "https://github.com/xkema/blog-demo-going-local-and-free-with-gatsby-and-netlify-cms#readme",
   "dependencies": {
     "@heroicons/react": "^1.0.6",
+    "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.8",
     "gatsby": "^4.21.0",
     "gatsby-plugin-image": "^2.21.0",
