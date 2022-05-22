@@ -1,10 +1,31 @@
 // src/components/Layout.js
 
 import { ChevronDoubleUpIcon } from '@heroicons/react/outline'
+import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import Navigation from './Navigation.js'
 
 const Layout = (props) => {
+
+  // Get settings data for.
+  const settings = useStaticQuery(graphql`
+    {
+      markdownRemark(frontmatter: {contentKey: {eq: "setting"}}) {
+        frontmatter {
+          title
+          description
+          settings {
+            siteTitle
+            email
+            facebook
+            twitter
+            youtube
+          }
+        }
+      }
+    }
+  `)
+  
   return (
     <div className='
       bg-stone-50
@@ -16,7 +37,7 @@ const Layout = (props) => {
         top-0
         z-30
       '>
-        <Navigation />
+        <Navigation settings={settings.markdownRemark.frontmatter.settings} />
       </header>
       <main>
         {props.children}
@@ -30,9 +51,13 @@ const Layout = (props) => {
         <span className='inline-block w-5 h-5'>
           <ChevronDoubleUpIcon />
         </span>
+        <hr className='my-4 mx-[25vw] border-stone-600' />
+        <p>{settings.markdownRemark.frontmatter.settings.siteTitle}</p>
       </footer>
     </div>
   )
 }
+
+
 
 export default Layout
