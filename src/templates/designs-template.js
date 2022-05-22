@@ -14,7 +14,7 @@ const DesignsTemplate = (props) => {
   return (
     <Layout>
       <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />
-      <div className='container py-4 px-4 md:px-0'>
+      <div className='container py-8 px-4 md:px-0'>
         <div
           dangerouslySetInnerHTML={{
             __html: props.data.markdownRemark.html
@@ -22,6 +22,7 @@ const DesignsTemplate = (props) => {
           className='
             prose
             prose-p:text-stone-900
+            mb-6
         '>
         </div>
         <ul className='
@@ -40,7 +41,7 @@ const DesignsTemplate = (props) => {
                   shadow
                 '>
                   <GatsbyImage
-                    image={edge.node.frontmatter.image.childImageSharp.gatsbyImageData}
+                    image={edge.node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
                     alt={"Please always fill the alternative text attributes!"}
                   />
                   <div className='
@@ -98,7 +99,7 @@ export const query = graphql`
           frontmatter {
             title
             description
-            image {
+            featuredImage {
               childImageSharp {
                 gatsbyImageData
               }

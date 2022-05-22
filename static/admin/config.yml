@@ -35,4 +35,11 @@ collections:
       - {label: "Content Key", name: "contentKey", widget: "hidden", default: "design", required: true}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false}
+      - {label: "Featured Image", name: "featuredImage", widget: "image", allow_multiple: false, choose_url: false}
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "Image", name: "image", widget: "image", allow_multiple: false, choose_url: false}

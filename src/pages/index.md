@@ -4,4 +4,5 @@ title: Index
 description: Index Page Description
 featuredImage: ../../uploads/gabriel-silverio-hibll8rsiwc-unsplash.jpg
 ---
-Index Page Content with a **bold** text!
+
+You're unsure whether or not to trust him, but very thankful that you wore a turtle neck.

@@ -18,7 +18,7 @@ const PageTemplate = (props) => {
         }}
         className='
           container
-          py-4 px-4
+          py-8 px-4
           md:px-0
           prose
           prose-p:text-stone-900

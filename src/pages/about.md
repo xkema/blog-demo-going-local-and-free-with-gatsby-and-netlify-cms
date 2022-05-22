@@ -3,25 +3,34 @@ contentKey: page
 title: About
 description: About Page Description
 ---
-About Page Content with a **bold** text!
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum varius finibus. Suspendisse aliquam feugiat gravida. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla et enim rhoncus, consectetur ipsum id, fermentum purus. Pellentesque sollicitudin sapien turpis, et dignissim sapien commodo non.
+Samantha wanted to be famous. The problem was that she had never considered all the downsides to actually being famous. **All you need to do is** pick up the pen and begin. The sunblock was handed to the girl before practice, but the burned skin was proof she did not apply it. There was coal in his stocking and he was thrilled.
+
+Had she taken the time to objectively consider these downsides, she would have never agreed to publically sing that first song.
 
 ![Please always fill the alternative text attributes!](../../uploads/priscilla-du-preez-dlxlgiy-2vu-unsplash.jpg "Hola 'gatsby-remark-images' plugin!")
 
-Nulla pellentesque nisi nec sem faucibus, nec auctor nisi ullamcorper. Donec a lacinia velit. Aliquam erat volutpat. Nulla placerat orci molestie lectus porta, aliquet consequat nisi rhoncus. Nunc consequat consequat odio. Sed ultrices justo vitae velit lobortis, a ornare libero tincidunt. Donec a justo diam. Proin eu ullamcorper sem, non fermentum augue. Etiam sed ante sit amet urna elementum fringilla. Etiam ultricies volutpat dui, id ultricies lorem egestas tincidunt. Nunc sagittis nisi pellentesque felis interdum pharetra eget eget felis.
+The rain was coming. Everyone thought this would be a good thing. It hadn't rained in months and the earth was dry as a bone. It wasn't a surprise that everyone thought a good rain was what was needed, but they never expected how much rain would actually arrive.
 
-> Suspendisse nec dui nibh. Cras non ornare nisi, eu rutrum urna. Sed lorem mauris, finibus ut commodo sed, lobortis at nulla. Quisque iaculis, diam id posuere luctus, orci turpis condimentum nunc, in dictum est sem quis turpis. Curabitur eget tortor id sem mattis rutrum a non tortor.
+> There weren't supposed to be dragons flying in the sky. First and foremost, dragons didn't exist. They were mythical creatures from fantasy books like unicorns. This was something that Pete knew in his heart to be true so he was having a difficult time acknowledging that there were actually fire-breathing dragons flying in the sky above him.
 
-Nullam ac cursus felis, eget mattis odio. Nulla rhoncus porttitor turpis ut eleifend. Pellentesque vulputate, nibh vel viverra bibendum, mauris magna tristique sem, vel mollis nisi arcu et lacus. Mauris sed tincidunt arcu, sed laoreet nisi. Quisque risus orci, bibendum eget augue eget, placerat euismod arcu. Nulla posuere dapibus nibh, eget interdum enim gravida a.
+There was a leak in the boat. Nobody had yet noticed it, and nobody would for the next couple of hours. This was a problem since the boat was heading out to sea and while the leak was quite small at the moment, it would be much larger when it was ultimately discovered. John had planned it exactly this way.
 
-1. Donec condimentum ex nibh, at malesuada libero placerat ut.
-2. Morbi ultricies consequat feugiat. 
-3. Phasellus purus velit, vulputate ut libero mattis, laoreet scelerisque erat. Nullam fermentum, lorem at varius mollis, neque lacus porttitor purus, quis pharetra eros felis vel turpis.
-4. Etiam convallis cursus justo in euismod.
+"It's never good to give them details," Janice told her sister. "Always be a little vague and keep them guessing." Her sister listened intently and nodded in agreement. She didn't fully understand what her sister was saying but that didn't matter. She loved her so much that she would have agreed to whatever came out of her mouth.
 
-*Donec mollis lacus id augue volutpat, et commodo eros blandit. Donec non augue sit amet dui suscipit tincidunt. Maecenas blandit felis eu nulla volutpat, vel rutrum erat elementum. Vestibulum enim nisi, pulvinar vitae blandit ultricies, luctus vel nisi. Nam vitae feugiat mauris, id placerat ipsum. Integer consequat sapien nulla, ut placerat metus aliquam nec. Phasellus tristique lectus velit, a laoreet lorem accumsan a.* Donec ultrices in justo at semper. Integer eu magna dapibus, ornare massa quis, lobortis dui. Cras ultrices ornare sem mollis pharetra. Nulla facilisi. Integer porta urna at ex varius scelerisque. Quisque vel sollicitudin augue, et rhoncus felis.
+> Sometimes it just doesn't make sense. The man walking down the street in a banana suit. The llama standing in the middle of the road. The fairies dancing in front of the car window. The fact that all of this was actually happening and wasn't a dream.
 
-Donec tempus orci ac nunc dignissim suscipit. Mauris nec cursus libero, ut iaculis elit. Nam non est congue, convallis ex a, aliquet eros. Vestibulum imperdiet nunc eu turpis semper, a volutpat libero lobortis. Duis tristique felis eget turpis efficitur aliquam. Praesent vel ipsum mollis, mollis justo eget, molestie libero. Aliquam sed tincidunt mi, quis auctor ex. Etiam tempus ex sed congue blandit. Fusce tempor ornare libero vel vulputate.
+It's an unfortunate reality that we don't teach people how to make money (beyond getting a 9 to 5 job) as part of our education system. The truth is there are a lot of different, legitimate ways to make money. That doesn't mean they are easy and that you won't have to work hard to succeed, but it does mean that if you're willing to open your mind a bit you don't have to be stuck in an office from 9 to 5 for the next fifty years o your life.
 
-Praesent elit magna, semper eget sodales et, elementum et leo. Aliquam eget purus ut lorem accumsan finibus. Sed ullamcorper turpis arcu, a aliquet nunc dictum pharetra. Maecenas hendrerit sapien posuere mi vulputate, vitae consectetur felis varius. Aenean vitae nulla eget diam aliquam commodo eget eget tortor. Donec in efficitur neque, quis rhoncus lectus. Cras nisi risus, fermentum non tellus ut, tincidunt molestie arcu. Morbi nec massa sed sapien mollis tempus. Nam quam neque, volutpat ut fringilla at, aliquam ac quam. Donec et mi enim. Ut semper lorem sed dui sagittis commodo. Sed sed magna eleifend, pretium velit vel, viverra justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi tempus urna velit, id interdum mauris imperdiet ac.
+The blinking light caught her attention. She thought about it a bit and couldn't remember ever noticing it before. That was strange since it was obvious the flashing light had been there for years. Now she wondered how she missed it for that amount of time and what other things in her small town she had failed to notice.
+
+1. She put the pen to paper but she couldn't bring herself to actually write anything.
+2. She just stared at the blank card and wondered what words she could write that would help in even a small way.
+3. She thought of a dozen ways to begin but none seemed to do justice to the situation.
+4. There were no words that could help and she knew it.
+
+*There was little doubt that the bridge was unsafe. All one had to do was look at it to know that with certainty. Yet Bob didn't see another option.* He may have been able to work one out if he had a bit of time to think things through, but time was something he didn't have. A choice needed to be made, and it needed to be made quickly.
+
+The thing that's great about this job is the time sourcing the items involves no traveling. I just look online to buy it. It's really as simple as that. While everyone else is searching for what they can sell, I sit in front of my computer and buy better stuff for less money and spend a fraction of the time doing it.
+
+She looked at her little girl who was about to become a teen. She tried to think back to when the girl had been younger but failed to pinpoint the exact moment when she had become a little too big to pick up and carry. It hit her all at once. She was no longer a little girl and she stood there speechless with fear, sadness, and pride all running through her at the same time.
