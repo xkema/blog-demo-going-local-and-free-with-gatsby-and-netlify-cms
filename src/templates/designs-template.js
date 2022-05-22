@@ -1,8 +1,11 @@
 // src/templates/designs-template.js
 
 import { graphql, Link } from 'gatsby';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react'
 import Layout from '../components/Layout.js';
+import PageHeader from '../components/PageHeader.js';
+
 
 const DesignsTemplate = (props) => {
 
@@ -10,23 +13,50 @@ const DesignsTemplate = (props) => {
 
   return (
     <Layout>
-      <div>
-        <h1>Designs Page Template</h1>
-        <h2>{props.data.markdownRemark.frontmatter.title}</h2>
-        <p>{props.data.markdownRemark.frontmatter.description}</p>
+      <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />
+      <div className='container py-4 px-4 md:px-0'>
         <div
           dangerouslySetInnerHTML={{
             __html: props.data.markdownRemark.html
           }}>
         </div>
-        <ul>
+        <ul className='
+          grid
+          gap-4
+          md:grid-cols-3
+          place-items-center
+        '>
           {
             props.data.allMarkdownRemark.edges.map((edge) => {
               return (
-                <li key={edge.node.id}>
-                  <h1>{edge.node.frontmatter.title}</h1>
-                  <p>{edge.node.frontmatter.description}</p>
-                  <Link to={edge.node.fields.slug}>{edge.node.fields.slug}</Link>
+                <li key={edge.node.id} className='
+                  bg-stone-100
+                  rounded-lg
+                  overflow-clip
+                  shadow
+                '>
+                  <GatsbyImage
+                    image={edge.node.frontmatter.image.childImageSharp.gatsbyImageData}
+                    alt={"Please always fill the alternative text attributes!"}
+                  />
+                  <div className='
+                    text-center
+                    p-4
+                    space-y-2
+                  '>
+                    <h1 className='text-lg font-medium'>{edge.node.frontmatter.title}</h1>
+                    <p>{edge.node.frontmatter.description}</p>
+                    <Link to={edge.node.fields.slug} title={edge.node.fields.slug} className='
+                      bg-stone-200
+                      inline-block
+                      py-2 px-4
+                      rounded-full
+                      transition-colors
+                      hover:bg-stone-300
+                    '>
+                      See the Detail
+                    </Link>
+                  </div>
                 </li>
               );
             })
@@ -64,6 +94,11 @@ export const query = graphql`
           frontmatter {
             title
             description
+            image {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
           }
         }
       }

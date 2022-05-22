@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import React from 'react'
 import Layout from '../components/Layout.js';
+import PageHeader from '../components/PageHeader.js';
 
 const DesignTemplate = (props) => {
 
@@ -11,13 +12,14 @@ const DesignTemplate = (props) => {
 
   return (
     <Layout>
-      <div>
-        <h1>Design Content Template</h1>
-        <div>{props.data.markdownRemark.frontmatter.title}</div>
-        <div>{props.data.markdownRemark.frontmatter.description}</div>
+      <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />
+      <div className='
+        container
+        py-4 px-4 md:px-0
+      '>
         <GatsbyImage
           image={props.data.markdownRemark.frontmatter.image.childImageSharp.gatsbyImageData}
-          alt={"Please always fill the alternative text attributes!"} 
+          alt={"Please always fill the alternative text attributes!"}
         />
       </div>
     </Layout>

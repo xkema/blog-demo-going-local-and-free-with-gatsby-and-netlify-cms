@@ -3,6 +3,7 @@
 import { graphql } from 'gatsby';
 import React from 'react'
 import Layout from '../components/Layout.js';
+import PageHeader from '../components/PageHeader.js';
 
 const PageTemplate = (props) => {
 
@@ -10,15 +11,11 @@ const PageTemplate = (props) => {
 
   return (
     <Layout>
-      <div>
-        <h1>Page Template</h1>
-        <h2>{props.data.markdownRemark.frontmatter.title}</h2>
-        <p>{props.data.markdownRemark.frontmatter.description}</p>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: props.data.markdownRemark.html
-          }}>
-        </div>
+      <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />
+      <div className='container py-4 px-4 md:px-0'
+        dangerouslySetInnerHTML={{
+          __html: props.data.markdownRemark.html
+        }}>
       </div>
     </Layout>
   )

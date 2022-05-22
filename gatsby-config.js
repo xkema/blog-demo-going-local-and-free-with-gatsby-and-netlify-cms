@@ -33,6 +33,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
+              maxWidth: 1024,
               linkImagesToOriginal: false,
               showCaptions: true,
             }
@@ -41,6 +42,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-postcss`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Quicksand:300,400,500,600,700']
+        }
+      }
+    },
     `gatsby-plugin-netlify-cms`
   ]
 }
