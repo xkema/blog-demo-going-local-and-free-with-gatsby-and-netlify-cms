@@ -15,7 +15,7 @@ const Navigation = (props) => {
       return !prevState;
     });
   }
-  
+
   return (
     <nav className='
       bg-gradient-to-r from-stone-100 to-stone-300
@@ -74,6 +74,16 @@ const Navigation = (props) => {
           md:inline-block
         '>
           Designs
+        </Link>
+        <Link to='/contact' activeClassName='bg-white/50' className='
+          block
+          px-5 py-3
+          md:py-5
+          transition-colors
+          hover:bg-white/50
+          md:inline-block
+        '>
+          Contact
         </Link>
       </div>
       <div className='py-5 px-5 absolute top-0 right-0 md:hidden'>
