@@ -11,7 +11,7 @@ const DesignTemplate = (props) => {
   console.log(props.data);
 
   return (
-    <Layout>
+    <Layout page={props.data.markdownRemark.frontmatter}>
       <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />
       <div className='
         container
@@ -66,6 +66,9 @@ export const query = graphql`
         featuredImage {
           childImageSharp {
             gatsbyImageData
+            resize(width: 1200, height: 630, fit: CONTAIN, background: "#fafaf9") {
+              src
+            }
           }
         }
         images {

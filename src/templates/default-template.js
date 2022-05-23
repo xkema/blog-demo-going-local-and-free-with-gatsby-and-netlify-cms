@@ -10,7 +10,7 @@ const DefaultTemplate = (props) => {
   console.log(props);
 
   return (
-    <Layout>
+    <Layout page={props.data.markdownRemark.frontmatter}>
       <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />
       <div
         dangerouslySetInnerHTML={{

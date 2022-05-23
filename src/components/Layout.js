@@ -4,6 +4,7 @@ import { ChevronDoubleUpIcon } from '@heroicons/react/outline'
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import Navigation from './Navigation.js'
+import Seo from './Seo.js'
 
 const Layout = (props) => {
 
@@ -25,13 +26,10 @@ const Layout = (props) => {
       }
     }
   `)
-  
+
   return (
-    <div className='
-      bg-stone-50
-      bg-[url(/img/noisy-texture-100x100-o4-d12-c-4481bd-t1.png)]
-      bg-fixed
-    '>
+    <div>
+      <Seo page={props.page} settings={settings.markdownRemark.frontmatter.settings} />
       <header className='
         sticky
         top-0
@@ -57,7 +55,5 @@ const Layout = (props) => {
     </div>
   )
 }
-
-
 
 export default Layout

@@ -8,7 +8,7 @@ const IndexTemplate = (props) => {
   console.log(props.data);
 
   return (
-    <Layout>
+    <Layout page={props.data.markdownRemark.frontmatter}>
         <div className='
           container
           flex
@@ -54,6 +54,9 @@ export const query = graphql`
               aspectRatio: 1
               transformOptions: {fit: COVER, cropFocus: CENTER}
             )
+            resize(width: 1200, height: 630, fit: CONTAIN, background: "#fafaf9") {
+              src
+            }
           }
         }
       }

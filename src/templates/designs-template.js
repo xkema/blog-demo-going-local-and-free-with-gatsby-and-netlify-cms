@@ -12,7 +12,7 @@ const DesignsTemplate = (props) => {
   console.log(props.data);
 
   return (
-    <Layout>
+    <Layout page={props.data.markdownRemark.frontmatter}>
       <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />
       <div className='container py-8 px-4 md:px-0'>
         <div
@@ -84,6 +84,14 @@ export const query = graphql`
       frontmatter {
         title
         description
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData
+            resize(width: 1200, height: 630, fit: CONTAIN, background: "#fafaf9") {
+              src
+            }
+          }
+        }
       }
       html
     }

@@ -8,7 +8,7 @@ const ContactTemplate = (props) => {
   console.log(props);
 
   return (
-    <Layout>
+    <Layout page={props.data.markdownRemark.frontmatter}>
       <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />
       <div
         dangerouslySetInnerHTML={{
@@ -61,6 +61,14 @@ export const query = graphql`
       frontmatter {
         title
         description
+        featuredImage {
+          childImageSharp {
+            gatsbyImageData
+            resize(width: 1200, height: 630, fit: CONTAIN, background: "#fafaf9") {
+              src
+            }
+          }
+        }
       }
       html
     }
