@@ -1,6 +1,16 @@
 // gatsby-config.js
 
-module.exports = {
+/**
+ * A flag to control Netlify CMS avbailability on production builds.
+ * (CMS will only be avaiable on local development environment.)
+ */
+let includeNetlifyCms = process.env.NODE_ENV === 'development';
+
+/**
+ * Reference as a variable to modify it on runtime.
+ */
+const gatsbyConfig = {
+  pathPrefix: `/blog-demo-going-local-and-free-with-gatsby-and-netlify-cms`,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -51,6 +61,12 @@ module.exports = {
         }
       }
     },
-    `gatsby-plugin-netlify-cms`
   ]
 }
+
+// Include Netlify CMS plugin if environment is local. (See the top!)
+if (includeNetlifyCms) {
+  gatsbyConfig.plugins.push(`gatsby-plugin-netlify-cms`);
+}
+
+module.exports = gatsbyConfig;

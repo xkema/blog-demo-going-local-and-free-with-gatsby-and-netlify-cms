@@ -7,9 +7,6 @@ import Layout from '../components/Layout.js';
 import PageHeader from '../components/PageHeader.js';
 
 const DesignTemplate = (props) => {
-
-  console.log(props.data);
-
   return (
     <Layout page={props.data.markdownRemark.frontmatter}>
       <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />

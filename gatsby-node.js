@@ -1,6 +1,6 @@
 // gatby-node.js
 
-const { accessSync, constants } = require('fs');
+const { accessSync, constants, rmSync, rmdirSync } = require('fs');
 const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');
 
@@ -77,4 +77,21 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       });
     }
   }
+}
+
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  // Skip "source-map" creation for js files.
+  if (stage === 'build-javascript') {
+    actions.setWebpackConfig({
+      devtool: false
+    });
+  }
+}
+
+exports.onPostBuild = () => {
+  // Delete unused artifacts and Netlify CMS configuration on production build.
+  rmSync(`./public/webpack.stats.json`);
+  rmSync(`./public/chunk-map.json`);
+  rmSync(`./public/admin/config.yml`);
+  rmdirSync(`./public/admin/`);
 }

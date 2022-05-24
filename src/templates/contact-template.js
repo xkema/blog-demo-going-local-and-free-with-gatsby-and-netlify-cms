@@ -4,9 +4,6 @@ import Layout from '../components/Layout.js';
 import PageHeader from '../components/PageHeader.js';
 
 const ContactTemplate = (props) => {
-
-  console.log(props);
-
   return (
     <Layout page={props.data.markdownRemark.frontmatter}>
       <PageHeader frontmatter={props.data.markdownRemark.frontmatter} />

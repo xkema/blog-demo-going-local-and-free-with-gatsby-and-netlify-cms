@@ -4,9 +4,6 @@ import React from 'react'
 import Layout from '../components/Layout.js';
 
 const IndexTemplate = (props) => {
-
-  console.log(props.data);
-
   return (
     <Layout page={props.data.markdownRemark.frontmatter}>
         <div className='

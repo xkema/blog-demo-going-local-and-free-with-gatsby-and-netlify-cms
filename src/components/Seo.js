@@ -1,4 +1,5 @@
 import { useLocation } from '@reach/router';
+import { withPrefix } from 'gatsby';
 import React from 'react'
 import { Helmet } from 'react-helmet'
 
@@ -6,17 +7,19 @@ const Seo = (props) => {
   // Get location data from the router.
   const location = useLocation();
 
+  const prefixPathWithoutTrailingSlash = withPrefix('/').slice(0, -1);
+
   const pageMeta = {
     title: props.settings.siteTitle,
     description: '',
-    imageSrc: '/img/static-img-og-fallback.jpg',
+    imageSrc: `${prefixPathWithoutTrailingSlash}/img/static-img-og-fallback.jpg`,
   }
 
   if (props.page !== undefined) {
     pageMeta.title = props.page.title;
     pageMeta.description = props.page.description;
     if (props.page.featuredImage?.childImageSharp.resize.src) {
-      pageMeta.imageSrc = props.page.featuredImage?.childImageSharp.resize.src;
+      pageMeta.imageSrc = `${prefixPathWithoutTrailingSlash}${props.page.featuredImage?.childImageSharp.resize.src}`;
     }
   }
 
@@ -43,14 +46,24 @@ const Seo = (props) => {
       <meta name="twitter:image:alt" content={pageMeta.description} />
 
       {/* favicon */}
-      <link rel="shortcut icon" href="/img/static-img-favicon.png"></link>
+      <link rel="shortcut icon" href={`${prefixPathWithoutTrailingSlash}/img/static-img-favicon.png`}></link>
 
       {/* other */}
-      <body className='
+      <body className={`
         bg-stone-50
         bg-[url(/img/static-img-bg-noisy-texture.png)]
-        bg-fixed'>
+        bg-fixed`}>
       </body>
+
+      {/* A fix to avoid "mini-css-extract-plugin" plugin's "Error: Can't resolve '${prefixPathWithoutTrailingSlash}/img/static-img-bg-noisy-texture.png ...' error. (This error rises only if you use a path prefix.) */}
+      {/* Can be removed removed after removal of sub-folder deployment and using a static URL for the background image! */}
+      <style>
+        {`
+          body {
+            background-image: url(${prefixPathWithoutTrailingSlash}/img/static-img-bg-noisy-texture.png) !important;
+          }
+        `}
+      </style>
     </Helmet>
   )
 }
